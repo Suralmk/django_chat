@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block head_title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  </head>
+  <body>
+    <div class="nav-bar-container">
+      <div class="logo">
+        <a href="{% url 'home' %}"
+          ><h1 style="font-family: cursive; color: white">Dj Chat</h1></a
+        >
+      </div>
+
+      <div class="nav-bar-menu">
+        <ul>
+          <li><a href="{% url  'index' %}">Select room</a></li>
+          <li><a href="{% url 'chats' %}">Active Chats</a></li>
+
+          {% if request.user.is_authenticated %}
+          <div class="auth-link-end">
+            <li><a href="{% url 'account_logout' %}">Log Out</a></li>
+          </div>
+          {% else %}
+          <div class="auth-links">
+            <li>
+              <a
+                href="{% url 'account_login' %}"
+                style="
+                  color: white;
+                  padding: 5px 10px;
+                  background: rgba(57, 9, 121, 0.699);
+                  border-radius: 10px 0 0 10px;
+                "
+                >Log In</a
+              >
+            </li>
+            <li>
+              <a
+                href="{% url 'account_signup' %}"
+                style="
+                  color: black;
+                  padding: 5px 10px;
+                  background: white;
+
+                  border-radius: 0 10px 10px 0;
+                "
+                >Sign Up</a
+              >
+            </li>
+          </div>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+
+    {% block content %} {% endblock %}
+  </body>
+</html>

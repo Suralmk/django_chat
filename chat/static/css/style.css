@@ -1,0 +1,236 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.chat-main-container {
+    background: rgba(128, 128, 128, 0.349);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.chat-container {
+    height: 95vh;
+    padding: 20px;
+    background: rgb(248, 248, 248);
+    width: 600px;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.247) 0 0 10px;
+    position: relative;
+    
+}
+.header-container {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+}
+.back-arrow-img {
+    top: 15px;
+    height: 20px;
+
+}
+.back-arrow-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.input-form-container{
+    display: flex;
+    background: rgb(248, 248, 248);
+    padding-top: 10px ;
+}
+
+#chat-log{
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+    gap: 10px;
+    padding: 10px;
+    flex: 1;
+
+}
+.chat-list-container {
+    height: 83%;
+    overflow-y: scroll;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.textInput {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    padding: 10px;
+    border-radius: 15px;
+    width: 100%;
+    background: transparent;
+}
+.heading {
+    font-family: cursive;
+    font-size: 30px;
+}
+.submit-button {
+    width: 20%;
+    padding: 10px;
+    outline: none;
+    margin-left: 5px;
+    border-radius: 15px;
+    border: none;
+    font-size: 15px;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: bolder;
+    height: 40px;
+    width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.247) 0 0 5px;
+}
+.submit-button img {
+    height: 100%;
+    width: 100%;
+    object-fit: center;
+}
+.message {
+    padding: 5px 15px;
+    border: 10px;
+    font-size: 16px;
+    font-family: cursive;
+   min-width:50px;
+   max-width:250px;
+   text-wrap: wrap;
+}
+.reciver {
+    background: rgba(57, 9, 121, 0.699);
+    color: white;
+    border-radius: 0 10px 10px 10px ;
+    align-self: flex-start;
+}
+.sender {
+    background: rgba(53, 95, 4, 0.699);
+    color: white;
+    border-radius: 10px 10px 0 10px ;
+    align-self:flex-end;
+}
+
+.select-room-container {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px;
+    background: rgb(248, 248, 248);
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: rgba(0, 0, 0, 0.247) 0 0 10px;
+}
+
+.select-room-container .input-form-container {
+    flex-direction: column;
+    gap: 10px;
+}
+.select-room-container .input-form-container .submit-button {
+    width: calc(100% - 20px);
+    padding: 15px;
+}
+.select-room-container .input-form-container .textInput {
+    width: calc(100% - 20px);
+}
+
+.chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    height: auto;
+}
+.chat-wrapper a {
+    padding: 5px 10px;
+    height:40px;
+    width: 40%;
+    background: rgb(212, 210, 210);
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    align-items: center;
+    display: flex;
+    color: black;
+    font-size: 15px;
+}
+.search-chat {
+    width: 100%;
+    margin: 20px 0;
+}
+.search-chat input {
+    width: 100%;
+    padding: 5px 10px;
+    outline: none;
+    border: 0.5px solid rgba(0, 0, 0, 0.37);
+
+}
+
+.search-chat input:focus {
+    box-shadow: rgba(57, 9, 121) 0 0 2px;
+}
+
+
+.auth-page {
+    width: 100%;
+    height: 100vh;
+    background: rgb(212, 210, 210);
+}
+.form-container {
+    width: 40%;
+    padding: 20px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container p {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+form p:nth-last-child() {
+    flex-direction: row;
+}
+form input {
+    padding: 5px;
+}
+form button {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    background: black;
+    color: white;
+    margin-top: 20px;
+}
+.login-page .menu-list {
+    display: flex;
+}
+
+
+/*=================
+        HOME
+==================*/
+.root-home-container {
+    width: 100%;
+    background: rgb(255, 255, 255);
+    height:auto;
+    
+}
+
+.root-home-wrapper {
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 10px;
+    padding: 30px;
+}

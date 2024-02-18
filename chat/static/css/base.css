@@ -1,0 +1,35 @@
+.nav-bar-container {
+    height: 65px;
+    width: 100%;
+    padding: 10px 30px;
+    background: rgba(53, 95, 4, 0.699);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+li {
+    list-style: none;
+}
+a {text-decoration: none;}
+.nav-bar-menu {
+    width: 30%;
+}
+.nav-bar-menu ul {
+width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar-menu ul li a {
+    font-size: 15px;
+    color: whitesmoke;
+
+}
+.nav-bar-menu ul li a:hover {
+    color: rgba(57, 9, 121, 0.699);
+
+}
+.auth-links {
+    display: flex;
+}

@@ -1,0 +1,43 @@
+{% extends 'chat/base.html' %} {% load static %} {% block content %}
+<div class="chat-main-container">
+  <div class="chat-container">
+    <div class="header-container">
+      <div class="back-arrow-img">
+        <a href="{% url 'chats' %}">
+          <img src="{% static 'arrow.png' %}" alt="" />
+        </a>
+      </div>
+      <p style="font-weight: bold">{{ room_name }}</p>
+    </div>
+
+    <div id="chat-log">
+      {% for chat in chats.all %} {% if chat.user.id == request.user.id %}
+      <div class="message sender">{{ chat.content }}</div>
+      {% else %}
+      <div class="message reciver">{{ chat.content }}</div>
+      {% endif %} {% endfor %}
+    </div>
+    <div class="input-form-container">
+      <input
+        class="textInput"
+        id="chat-message-input"
+        type="text"
+        size="100"
+        placeholder="Message"
+      /><br />
+      <button type="submit" class="submit-button">
+        <img
+          class="send"
+          id="chat-message-submit"
+          src="{% static 'send.png' %}"
+          alt=""
+        />
+      </button>
+    </div>
+  </div>
+  {{ room_name|json_script:"room-name" }}
+</div>
+
+{{ request.user.id|json_script:"user_id"}}
+<script src="{% static '/js/room.js' %}"></script>
+{% endblock %}

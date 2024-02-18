@@ -1,0 +1,29 @@
+{% extends 'chat/base.html' %} {% load static %} {% block head_title %} chat
+list {% endblock %} {% block content %}
+<div class="chat-main-container">
+  <div class="chat-container">
+    <div class="header-container">
+      <div class="back-arrow-img">
+        <a href="{% url 'index' %}">
+          <img src="{% static 'arrow.png' %}" alt="" />
+        </a>
+      </div>
+    </div>
+    <div class="search-chat">
+      <input
+        type="text"
+        placeholder="Search ..."
+        name="search_chat"
+        id="search_chat"
+      />
+    </div>
+    <div class="chat-list-container">
+      {% for room in rooms %}
+      <div class="chat-wrapper">
+        <a href="{%  url 'room' room.name %}">{{ room.name }}</a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}
